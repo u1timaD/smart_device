@@ -1,6 +1,6 @@
 let accordion = document.querySelectorAll('.accordion');
 let footerNav = document.querySelector('.footer__navigation');
-// let mobileWidthMediaQuery = window.matchMedia('(max-widht: 768px');
+let mobileWidthMediaQuery = window.matchMedia('(max-widht: 768px');
 
 
 
