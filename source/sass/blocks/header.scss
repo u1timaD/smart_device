@@ -1,5 +1,6 @@
 .header {
-  background-color: $color-black-pearl;
+  // background-color: $color-black-pearl;
+  background: linear-gradient(180deg,#041827 84.9%,rgba(4,24,39,0) 100%);
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -33,7 +34,7 @@
 }
 
 .header__button {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -45,6 +46,7 @@
   background-color: transparent;
   padding: 10px 15px;
   cursor: pointer;
+  letter-spacing: .05em;
 
   &:hover,
   &:focus {

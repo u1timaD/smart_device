@@ -44,7 +44,7 @@
 }
 
 .hero__container h1 {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial" ,sans-serif;
   font-weight: 700;
   font-size: 80px;
   line-height: 105px;
@@ -56,6 +56,7 @@
 
   @include vp-1023 {
     line-height: 80px;
+    font-size: 64px;
   }
 
   @include vp-767 {
@@ -65,7 +66,6 @@
 }
 
 .hero__container p {
-  font-family: "PT Mono";
   font-weight: 400;
   font-size: 22px;
   line-height: 34px;
@@ -83,7 +83,7 @@
 }
 
 .hero__button {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;

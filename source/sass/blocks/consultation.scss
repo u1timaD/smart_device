@@ -14,14 +14,15 @@
 }
 
 .consultation__container {
-  z-index: 2;
+  // z-index: 2;
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  max-width: 1260px;
+  align-items: center;
+  // gap: 30px;
   justify-content: space-between;
   padding-top: 170px;
   padding-bottom: 250px;
-  padding-right: 25px;
+
 
   @include vp-1023 {
     padding: 50px;
@@ -37,6 +38,7 @@
   width: 510px;
   height: 285px;
   z-index: 2;
+  // background-size: cover;
 
   @include vp-1023 {
     display: none;
@@ -50,7 +52,16 @@
 .consultation__block {
   display: flex;
   flex-direction: column;
-  width: 100%;  
+  width: 100%;
+  max-width: 585px;
+
+  @include vp-1023 {
+    max-width: 100%;
+  }
+
+  @include vp-767 {
+ 
+  }
 }
 
 .consultation__container h2 {
@@ -62,6 +73,15 @@
   color: $color-default-white;
   margin: 0;
   margin-bottom: 15px;
+
+  @include vp-1023 {
+    
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 42px;
+  }
 }
 
 .consultation__container p {
@@ -73,6 +93,11 @@
   color: $color-default-white;
   margin: 0;
   margin-bottom: 35px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 
