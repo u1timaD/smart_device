@@ -361,7 +361,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -718,7 +718,9 @@ button,
 }
 
 .header {
-  background-color: #041827;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -755,7 +757,7 @@ button,
   }
 }
 .header__button {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -767,6 +769,7 @@ button,
   background-color: transparent;
   padding: 10px 15px;
   cursor: pointer;
+  letter-spacing: 0.05em;
 }
 .header__button:hover, .header__button:focus {
   opacity: 0.5;
@@ -951,7 +954,7 @@ button,
 }
 
 .hero__container h1 {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 80px;
   line-height: 105px;
@@ -964,6 +967,7 @@ button,
 @media (max-width: 1023px) {
   .hero__container h1 {
     line-height: 80px;
+    font-size: 64px;
   }
 }
 @media (max-width: 767px) {
@@ -974,7 +978,6 @@ button,
 }
 
 .hero__container p {
-  font-family: "PT Mono";
   font-weight: 400;
   font-size: 22px;
   line-height: 34px;
@@ -990,7 +993,7 @@ button,
 }
 
 .hero__button {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
@@ -1534,21 +1537,18 @@ button,
 }
 
 .consultation__container {
-  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
+  max-width: 1260px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 170px;
   padding-bottom: 250px;
-  padding-right: 25px;
 }
 @media (max-width: 1023px) {
   .consultation__container {
@@ -1581,8 +1581,13 @@ button,
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  max-width: 585px;
 }
-
+@media (max-width: 1023px) {
+  .consultation__block {
+    max-width: 100%;
+  }
+}
 .consultation__container h2 {
   font-family: "Roboto Condensed";
   font-weight: 400;
@@ -1592,6 +1597,12 @@ button,
   color: #ffffff;
   margin: 0;
   margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .consultation__container h2 {
+    font-size: 30px;
+    line-height: 42px;
+  }
 }
 
 .consultation__container p {
@@ -1603,6 +1614,12 @@ button,
   color: #ffffff;
   margin: 0;
   margin-bottom: 35px;
+}
+@media (max-width: 767px) {
+  .consultation__container p {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .consultation__form {
@@ -1701,15 +1718,18 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
+  -webkit-column-gap: 110px;
+     -moz-column-gap: 110px;
+          column-gap: 110px;
 }
 
 .nav__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
 }
 @media (max-width: 1023px) {
   .nav__block {
@@ -2089,6 +2109,19 @@ input:checked + label::after {
 
 .social__link svg {
   fill: #f8fdff;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 16, 27, 0.7);
+  overflow: auto;
+  z-index: 10;
+}
+
+.show {
+  display: block;
 }
 
 /* @mixin hover-focus {

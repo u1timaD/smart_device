@@ -15,11 +15,10 @@
           <div class="header__container container">
             <div class="header__logo logo">
               <a class="logo__link" href="index.html">
-                <img class="logo__img logo__img--header" src="img/icons/main-logo.svg" alt="Логотип Магазина технологий"> 
-                <div class="logo__block logo__block--header">
-                  <span class="logo__title">Smart Device</span>
-                  <span class="logo__description">Умные технологии</span>
-                </div>
+                <picture>
+                  <source media="(min-width: 320px) and (max-width: 769px)" srcset="img/icons/main-logo-mobile.svg"> 
+                  <img class="logo__img logo__img--header" src="img/icons/main-logo.svg" alt="Логотип Магазина Smart Device умные технологии"> 
+                </picture>
               </a>
             </div>
             <address class="header__contacts contacts">
@@ -40,10 +39,10 @@
           <div class="hero__container container">
               <h1>Печатные платы</h1>
               <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-              <button class="hero__button">
+              <a class="hero__button" href="#consultation">
                 <span>Получить бесплатную консультацию</span>
                 <span>Бесплатная консультация</span>
-              </button>
+              </a>
           </div>
         </section>
 
@@ -131,7 +130,7 @@
           </div>
         </section>
 
-        <section class="consultation">
+        <section class="consultation" id="consultation">
           <div class="consultation__container container">
             <img class="consultation__img" src="img/plane.png" width="510" height="285">
             <div class="consultation__block">
@@ -150,8 +149,6 @@
                     <label class="checkbox__label" for="checkbox">Я согласен на обработку  персональных данных</label>
                   </div>
                 </div>
-                
-                
               </form>
             </div>
           </div>
@@ -166,10 +163,6 @@
             <div class="footer__logo logo">
               <a class="logo__link" href="index.html">
                 <img class="logo__img" src="img/icons/main-logo.svg" alt="Логотип Магазина технологий"> 
-                <div class="logo__block">
-                  <span class="logo__title">Smart Device</span>
-                  <span class="logo__description">Умные технологии</span>
-                </div>
               </a>
             </div>
             <div class="footer__social social">
@@ -262,7 +255,31 @@
       </footer>
     </div>
 
+    
+
     <!-- Модалки -->
+
+    <!-- <section class="callback callback-modal show overlay">
+      <h2 class="visually-hidden">Модальное окно с формой для обратной связи</h2>
+      <div class="">
+        <h3>Закажите звонок</h3>
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <form class="consultation__form form" action="" method="post">
+          <div class="form__block"> 
+            <input type="text" name="name" placeholder="Имя" required>
+            <input type="tel" name="tel" placeholder="Телефон" required pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$">
+            <textarea cols="15" rows="10" placeholder="Ваш вопрос" required></textarea>
+          </div>
+          <div class="form__submit">
+            <button class="form__button" type="submit">Задать вопрос</button>
+            <div class="form__checkbox checkbox">
+              <input class="visually-hidden" type="checkbox" name="checkbox" id="checkbox" required>
+              <label class="checkbox__label" for="checkbox">Я согласен на обработку  персональных данных</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section> -->
     <!-- <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
