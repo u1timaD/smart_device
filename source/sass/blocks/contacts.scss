@@ -30,7 +30,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("/img/icons/email.svg");
+    background-image: url("../img/icons/email.svg");
     background-repeat: no-repeat;
     width: 21px;
     height: 20px;
@@ -51,7 +51,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("/img/icons/phone.svg");
+    background-image: url("../img/icons/phone.svg");
     background-repeat: no-repeat;
     width: 21px;
     height: 20px;

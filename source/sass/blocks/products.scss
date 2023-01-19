@@ -17,7 +17,7 @@
 }
 
 .products h2 {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 56px;
@@ -78,86 +78,86 @@
   }
 
   &--left {
-    background-image: url("/img/product-1.jpg");
+    background-image: url("../img/product-1.jpg");
     background-color: $color-danube;
 
     @include retina {
-      background-image: url("/img/product-1@2x.jpg");
+      background-image: url("../img/product-1@2x.jpg");
     }
 
     @include vp-1023 {
-      background-image: url("/img/product-tablet-1.jpg");
+      background-image: url("../img/product-tablet-1.jpg");
       background-size: cover;
       
       @include retina {
-        background-image: url("/img/product-tablet-1@2x.jpg");
+        background-image: url("../img/product-tablet-1@2x.jpg");
       }
     }
   
     @include vp-767 {
-      background-image: url("/img/product-mobile-1.jpg");
+      background-image: url("../img/product-mobile-1.jpg");
 
       @include retina {
-        background-image: url("/img/product-mobile-1@2x.jpg");
+        background-image: url("../img/product-mobile-1@2x.jpg");
       }
     }
   }
 
   &--center {
-    background-image: url("/img/product-2.jpg");
+    background-image: url("../img/product-2.jpg");
     background-color: $color-danube;
 
     @include retina {
-      background-image: url("/img/product-2@2x.jpg");
+      background-image: url("../img/product-2@2x.jpg");
     }
 
     @include vp-1023 {
-      background-image: url("/img/product-tablet-2.jpg");
+      background-image: url("../img/product-tablet-2.jpg");
       background-size: cover;
 
       @include retina {
-        background-image: url("/img/product-tablet-2@2x.jpg");
+        background-image: url("../img/product-tablet-2@2x.jpg");
       }
     }
 
     @include vp-767 {
-      background-image: url("/img/product-mobile-2.jpg");
+      background-image: url("../img/product-mobile-2.jpg");
 
       @include retina {
-        background-image: url("/img/product-mobile-2@2x.jpg");
+        background-image: url("../img/product-mobile-2@2x.jpg");
       }
     }
   }
 
   &--right {
-    background-image: url("/img/product-3.jpg");
+    background-image: url("../img/product-3.jpg");
     background-color: $color-danube;
 
     @include retina {
-      background-image: url("/img/product-3@2x.jpg");
+      background-image: url("../img/product-3@2x.jpg");
     }
 
     @include vp-1023 {
-      background-image: url("/img/product-tablet-3.jpg");
+      background-image: url("../img/product-tablet-3.jpg");
       background-size: cover;
 
       @include retina {
-        background-image: url("/img/product-tablet-3@2x.jpg");
+        background-image: url("../img/product-tablet-3@2x.jpg");
       }
     }
 
     @include vp-767 {
-      background-image: url("/img/product-mobile-3.jpg");
+      background-image: url("../img/product-mobile-3.jpg");
 
       @include retina {
-        background-image: url("/img/product-mobile-3@2x.jpg");
+        background-image: url("../img/product-mobile-3@2x.jpg");
       }
     }
   }
 }
 
 .products__item h3 {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
@@ -184,7 +184,7 @@
   cursor: pointer;
   border-radius: 3px 0 0 0;
   border: none;
-  background-image: url("/img/icons/arrow.svg");
+  background-image: url("../img/icons/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   transition: all 0.5s;
