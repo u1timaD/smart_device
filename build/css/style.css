@@ -317,30 +317,30 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-display: swap;
-  src: url("/fonts/PTMonoRegular.woff2") format("woff2"), url("/fonts/PTMonoRegular.woff") format("woff");
+  src: url("../fonts/PTMonoRegular.woff2") format("woff2"), url("../fonts/PTMonoRegular.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-display: swap;
-  src: url("/fonts/RobotoCondensedRegular.woff2") format("woff2"), url("/fonts/RobotoCondensedRegular.woff") format("woff");
+  src: url("../fonts/RobotoCondensedRegular.woff2") format("woff2"), url("../fonts/RobotoCondensedRegular.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-display: swap;
-  src: url("/fonts/RobotoCondensedBold.woff2") format("woff2"), url("/fonts/RobotoCondensedBold.woff") format("woff");
+  src: url("../fonts/RobotoCondensedBold.woff2") format("woff2"), url("../fonts/RobotoCondensedBold.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 500;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial", sans-serif;
   font-display: swap;
-  src: url("/fonts/RobotoMedium.woff2") format("woff2"), url("/fonts/RobotoMedium.woff") format("woff");
+  src: url("../fonts/RobotoMedium.woff2") format("woff2"), url("../fonts/RobotoMedium.woff") format("woff");
 }
 *,
 *::before,
@@ -2043,7 +2043,7 @@ textarea::placeholder {
 
 .checkbox__label {
   position: relative;
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 15px;
