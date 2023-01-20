@@ -43,3 +43,26 @@ accordion.forEach((el) => {
   });
 })();
 
+
+
+let modalOverlay = document.querySelector('[data-modal-overlay]');
+let headerHidden = document.querySelector('[data-header-hidden]');
+let getCall = document.querySelector('[data-get-call]');
+let modalBlock = document.querySelector('[data-modal-block]');
+let modalEscape = document.querySelector('[data-modal-escape]');
+
+getCall.addEventListener('click', () => {
+  modalOverlay.classList.toggle('modal__overlay');
+  headerHidden.classList.toggle('header__hidden');
+  modalBlock.classList.toggle('modal__hidden');
+  modalBlock.classList.toggle('modal__call');
+});
+
+modalEscape.addEventListener('click', () => {
+  modalOverlay.classList.toggle('modal__overlay');
+  headerHidden.classList.toggle('header__hidden');
+  modalBlock.classList.toggle('modal__hidden');
+  modalBlock.classList.toggle('modal__call');
+});
+
+console.log(headerHidden);

@@ -8,9 +8,9 @@
     <title>Smart Device</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body data-modal-overlay>
     <div class="wrapper">
-      <header>
+      <header data-header-hidden>
         <div class="header">
           <div class="header__container container">
             <div class="header__logo logo">
@@ -29,7 +29,7 @@
                 <span>+7 (495) 000 52 52</span>
               </a>
             </address>
-            <button class="header__button button">Заказать звонок</button>
+            <button class="header__button button" data-get-call>Заказать звонок</button>
           </div>
         </div>
       </header>
@@ -259,27 +259,31 @@
 
     <!-- Модалки -->
 
-    <!-- <section class="callback callback-modal show overlay">
-      <h2 class="visually-hidden">Модальное окно с формой для обратной связи</h2>
-      <div class="">
-        <h3>Закажите звонок</h3>
-        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <form class="consultation__form form" action="" method="post">
-          <div class="form__block"> 
-            <input type="text" name="name" placeholder="Имя" required>
-            <input type="tel" name="tel" placeholder="Телефон" required pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$">
-            <textarea cols="15" rows="10" placeholder="Ваш вопрос" required></textarea>
-          </div>
-          <div class="form__submit">
-            <button class="form__button" type="submit">Задать вопрос</button>
-            <div class="form__checkbox checkbox">
-              <input class="visually-hidden" type="checkbox" name="checkbox" id="checkbox" required>
-              <label class="checkbox__label" for="checkbox">Я согласен на обработку  персональных данных</label>
+    <section class="overlay modal__hidden" data-modal-block>
+      <div class="consultation__container container">
+        <div class="consultation__block">
+          <h2>Закажите звонок!</h2>
+          <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <form class="consultation__form form" action="" method="post">
+            <div class="form__block"> 
+              <input type="text" name="name" placeholder="Имя" required>
+              <input type="tel" name="tel" placeholder="Телефон" required pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$">
+              <textarea cols="15" rows="10" placeholder="Ваш вопрос" required></textarea>
             </div>
-          </div>
-        </form>
+            <div class="form__submit">
+              <button class="form__button" type="submit">отправить</button>
+              <div class="form__checkbox checkbox">
+                <input class="visually-hidden" type="checkbox" name="checkbox" id="checkbox-modal" required>
+                <label class="checkbox__label" for="checkbox-modal">Я согласен на обработку  персональных данных</label>
+              </div>
+            </div>
+            <botton class="modal__escape" type="botton" data-modal-escape>
+              <span class="visually-hidden">Закрыть</span>
+            </botton>
+          </form>
+        </div>
       </div>
-    </section> -->
+    </section>
     <!-- <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>

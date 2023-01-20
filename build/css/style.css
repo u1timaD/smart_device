@@ -317,28 +317,28 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono";
   font-display: swap;
   src: url("../fonts/PTMonoRegular.woff2") format("woff2"), url("../fonts/PTMonoRegular.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed";
   font-display: swap;
   src: url("../fonts/RobotoCondensedRegular.woff2") format("woff2"), url("../fonts/RobotoCondensedRegular.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed";
   font-display: swap;
   src: url("../fonts/RobotoCondensedBold.woff2") format("woff2"), url("../fonts/RobotoCondensedBold.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 500;
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/RobotoMedium.woff2") format("woff2"), url("../fonts/RobotoMedium.woff") format("woff");
 }
@@ -363,6 +363,7 @@ html {
   line-height: 24px;
   font-family: "PT Mono", "Arial", sans-serif;
   color: #000000;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -371,6 +372,7 @@ html {
 body {
   width: 100%;
   height: 100%;
+  position: relative;
   background-color: #ffffff;
 }
 
@@ -661,7 +663,6 @@ button,
   left: 0;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 .modal__content {
   position: relative;
@@ -717,6 +718,115 @@ button,
   pointer-events: auto;
 }
 
+.modal__escape {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.modal__escape:active {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.modal__escape::before {
+  content: " ";
+  position: absolute;
+  width: 23px;
+  height: 2px;
+  background-color: #fff;
+  top: 20px;
+  right: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.modal__escape::after {
+  content: " ";
+  position: absolute;
+  width: 23px;
+  height: 2px;
+  background-color: #fff;
+  top: 20px;
+  right: 10px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.modal__overlay {
+  overflow: hidden;
+}
+
+.header__hidden {
+  display: none;
+}
+
+.modal__hidden {
+  display: none;
+}
+
+.modal__call {
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+.modal__call .consultation__container {
+  border-radius: 3px;
+  position: absolute;
+  display: block;
+  max-width: 500px;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 146px;
+  left: 0;
+  right: 0;
+  background-color: #00b2ff;
+}
+.modal__call .form__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 25px;
+}
+.modal__call textarea {
+  max-height: 155px;
+}
+.modal__call .form__submit {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal__call .form__checkbox {
+  max-width: 100%;
+  margin-left: 22px;
+}
+.modal__call .checkbox__label::before {
+  top: 0;
+}
+.modal__call .checkbox__label::after {
+  top: 5px;
+}
+.modal__call .form__button {
+  width: 100%;
+  letter-spacing: 0.05em;
+}
+
 .header {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -770,9 +880,17 @@ button,
   padding: 10px 15px;
   cursor: pointer;
   letter-spacing: 0.05em;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 .header__button:hover, .header__button:focus {
-  opacity: 0.5;
+  background-color: #00b2ff;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .header__button:active {
   opacity: 0.2;

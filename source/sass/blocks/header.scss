@@ -47,10 +47,12 @@
   padding: 10px 15px;
   cursor: pointer;
   letter-spacing: .05em;
+  transition: transform .2s;
 
   &:hover,
   &:focus {
-    opacity: 0.5;
+    background-color: $color-deep-sky-blue;
+    transform: scale(1.05);
   }
 
   &:active {
